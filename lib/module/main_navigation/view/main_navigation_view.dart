@@ -28,6 +28,9 @@ class _MainNavigationViewState extends State<MainNavigationView> {
     "/zulkarnaim",
     "/fajar",
     "/evan",
+    "/suri",
+    "/syamsul",
+    "/andre",
   ];
 
   List navigationItems = [
@@ -62,6 +65,18 @@ class _MainNavigationViewState extends State<MainNavigationView> {
     NavigationItem(
       icon: Icons.developer_board,
       label: "Evan",
+    ),
+    NavigationItem(
+      icon: Icons.developer_board,
+      label: "Suri",
+    ),
+    NavigationItem(
+      icon: Icons.developer_board,
+      label: "Syamsul",
+    ),
+    NavigationItem(
+      icon: Icons.developer_board,
+      label: "Andre",
     ),
   ];
 

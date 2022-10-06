@@ -133,6 +133,30 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const EvanDashboardView(),
             ),
           ),
+          GoRoute(
+            path: '/suri',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const SuriDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/syamsul',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const SyamsulDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/andre',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const AndreDashboardView(),
+            ),
+          ),
         ],
       ),
     ],
