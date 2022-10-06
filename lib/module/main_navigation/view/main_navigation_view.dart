@@ -95,29 +95,44 @@ class _MainNavigationViewState extends State<MainNavigationView> {
     return Scaffold(
       body: Row(
         children: <Widget>[
-          NavigationRail(
-            backgroundColor: Colors.white,
-            selectedIndex: selectedIndex,
-            groupAlignment: groupAligment,
-            onDestinationSelected: (int index) {
-              selectedIndex = index;
-              setState(() {});
-              var routeName = routes[index];
-              go(routeName);
-            },
-            labelType: NavigationRailLabelType.all,
-            destinations: List.generate(navigationItems.length, (index) {
-              var item = navigationItems[index];
-              return NavigationRailDestination(
-                icon: Icon(item.icon),
-                label: Text(
-                  item.label,
-                  style: const TextStyle(
-                    fontSize: 12.0,
+          Scrollbar(
+            thumbVisibility: true,
+            child: SingleChildScrollView(
+              child: Container(
+                constraints: BoxConstraints(
+                    minHeight: MediaQuery.of(context).size.height),
+                child: IntrinsicHeight(
+                  child: NavigationRail(
+                    backgroundColor: Colors.white,
+                    selectedIndex: selectedIndex,
+                    groupAlignment: groupAligment,
+                    onDestinationSelected: (int index) {
+                      selectedIndex = index;
+                      setState(() {});
+                      var routeName = routes[index];
+                      go(routeName);
+                    },
+                    labelType: NavigationRailLabelType.none,
+                    extended: true,
+                    // extended: true,
+                    destinations:
+                        List.generate(navigationItems.length, (index) {
+                      var item = navigationItems[index];
+                      return NavigationRailDestination(
+                        padding: const EdgeInsets.all(0.0),
+                        icon: Icon(
+                          item.icon,
+                        ),
+                        label: Text(
+                          item.label,
+                          style: const TextStyle(),
+                        ),
+                      );
+                    }),
                   ),
                 ),
-              );
-            }),
+              ),
+            ),
           ),
           const VerticalDivider(thickness: 1, width: 1),
           Expanded(
