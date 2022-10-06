@@ -1,0 +1,20 @@
+{
+    "modules": [
+        "auth/login",
+        "main_navigation",
+        "dashboard",
+        "product_list",
+        "customer_list",
+        "order_list",
+        "report",
+        "profile",
+        "setting",
+        "deny/deny_dashboard",
+        "danu/danu_dashboard",
+        "kresno/kresno_dashboard",
+        "azhar/azhar_dashboard",
+        "zulkarnaim/zulkarnaim_dashboard",
+        "fajar/fajar_dashboard",
+        "evan/evan_dashboard"
+    ]
+}
