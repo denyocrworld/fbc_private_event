@@ -3,6 +3,8 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:fhe_template/module/andre/andre_dashboard/controller/andre_dashboard_controller.dart';
+export 'package:fhe_template/module/andre/andre_dashboard/view/andre_dashboard_view.dart';
 export 'package:fhe_template/module/auth/login/controller/login_controller.dart';
 export 'package:fhe_template/module/auth/login/view/login_view.dart';
 export 'package:fhe_template/module/azhar/azhar_dashboard/controller/azhar_dashboard_controller.dart';
@@ -34,6 +36,10 @@ export 'package:fhe_template/module/report/controller/report_controller.dart';
 export 'package:fhe_template/module/report/view/report_view.dart';
 export 'package:fhe_template/module/setting/controller/setting_controller.dart';
 export 'package:fhe_template/module/setting/view/setting_view.dart';
+export 'package:fhe_template/module/suri/suri_dashboard/controller/suri_dashboard_controller.dart';
+export 'package:fhe_template/module/suri/suri_dashboard/view/suri_dashboard_view.dart';
+export 'package:fhe_template/module/syamsul/syamsul_dashboard/controller/syamsul_dashboard_controller.dart';
+export 'package:fhe_template/module/syamsul/syamsul_dashboard/view/syamsul_dashboard_view.dart';
 export 'package:fhe_template/module/zulkarnaim/zulkarnaim_dashboard/controller/zulkarnaim_dashboard_controller.dart';
 export 'package:fhe_template/module/zulkarnaim/zulkarnaim_dashboard/view/zulkarnaim_dashboard_view.dart';
 export 'package:fhe_template/router/no_transition.dart';
