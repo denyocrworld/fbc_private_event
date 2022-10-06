@@ -95,40 +95,45 @@ class _MainNavigationViewState extends State<MainNavigationView> {
     return Scaffold(
       body: Row(
         children: <Widget>[
-          Scrollbar(
-            thumbVisibility: true,
-            child: SingleChildScrollView(
-              child: Container(
-                constraints: BoxConstraints(
-                    minHeight: MediaQuery.of(context).size.height),
-                child: IntrinsicHeight(
-                  child: NavigationRail(
-                    backgroundColor: Colors.white,
-                    selectedIndex: selectedIndex,
-                    groupAlignment: groupAligment,
-                    onDestinationSelected: (int index) {
-                      selectedIndex = index;
-                      setState(() {});
-                      var routeName = routes[index];
-                      go(routeName);
-                    },
-                    labelType: NavigationRailLabelType.none,
-                    extended: true,
-                    // extended: true,
-                    destinations:
-                        List.generate(navigationItems.length, (index) {
-                      var item = navigationItems[index];
-                      return NavigationRailDestination(
-                        padding: const EdgeInsets.all(0.0),
-                        icon: Icon(
-                          item.icon,
-                        ),
-                        label: Text(
-                          item.label,
-                          style: const TextStyle(),
-                        ),
-                      );
-                    }),
+          Container(
+            color: Colors.white,
+            child: Scrollbar(
+              thumbVisibility: true,
+              child: SingleChildScrollView(
+                child: Transform.scale(
+                  scale: 0.7,
+                  child: Container(
+                    constraints: BoxConstraints(
+                        minHeight: MediaQuery.of(context).size.height),
+                    child: IntrinsicHeight(
+                      child: NavigationRail(
+                        backgroundColor: Colors.white,
+                        selectedIndex: selectedIndex,
+                        groupAlignment: groupAligment,
+                        onDestinationSelected: (int index) {
+                          selectedIndex = index;
+                          setState(() {});
+                          var routeName = routes[index];
+                          go(routeName);
+                        },
+                        labelType: NavigationRailLabelType.none,
+                        extended: true,
+                        destinations:
+                            List.generate(navigationItems.length, (index) {
+                          var item = navigationItems[index];
+                          return NavigationRailDestination(
+                            padding: const EdgeInsets.all(0.0),
+                            icon: Icon(
+                              item.icon,
+                            ),
+                            label: Text(
+                              item.label,
+                              style: const TextStyle(),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
                   ),
                 ),
               ),
