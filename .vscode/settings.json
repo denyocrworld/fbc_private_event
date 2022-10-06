@@ -14,10 +14,5 @@
       "editor.tabCompletion": "onlySnippets",
       "editor.wordBasedSuggestions": false,
       "editor.defaultFormatter": "Dart-Code.dart-code"
-},
-"workbench.colorCustomizations": {
-    "activityBar.background": "#4B220B",
-    "titleBar.activeBackground": "#69300F",
-    "titleBar.activeForeground": "#FEF9F7"
-},
+  },
 }
