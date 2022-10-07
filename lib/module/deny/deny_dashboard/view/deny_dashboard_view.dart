@@ -15,7 +15,8 @@ class DenyDashboardView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         controller: ScrollController(),
-        child: Padding(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
