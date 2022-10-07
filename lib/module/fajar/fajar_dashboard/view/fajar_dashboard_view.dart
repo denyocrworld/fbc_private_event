@@ -40,6 +40,10 @@ class FajarDashboardView extends StatefulWidget {
 
     return Scaffold(
       backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        title: const Text("FajarDashboard"),
+        actions: const [],
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -52,7 +56,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card1
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2.5,
+                  width: 400,
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
                   decoration: const BoxDecoration(
                     boxShadow: [
@@ -183,7 +187,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card2
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2.5,
+                  width: 400,
                   padding: const EdgeInsets.all(16),
                   decoration: const BoxDecoration(
                     color: purple,
@@ -266,7 +270,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card3
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2.5,
+                  width: 400,
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
                     color: white,
@@ -332,7 +336,7 @@ class FajarDashboardView extends StatefulWidget {
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
                     child: Container(
-                      width: MediaQuery.of(context).size.width / 2.5,
+                      width: 400,
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -408,7 +412,7 @@ class FajarDashboardView extends StatefulWidget {
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
                     child: Container(
-                      width: MediaQuery.of(context).size.width / 2.5,
+                      width: 360,
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -483,63 +487,69 @@ class FajarDashboardView extends StatefulWidget {
                           const SizedBox(
                             height: 16.0,
                           ),
-                          Container(
-                            margin: const EdgeInsets.all(10),
-                            alignment: Alignment.bottomLeft,
-                            height: 160.0,
-                            decoration: BoxDecoration(
-                              image: const DecorationImage(
-                                  image: NetworkImage(
-                                      'https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60'),
-                                  fit: BoxFit.cover),
-                              color: white,
-                              border: Border.all(
-                                width: 1.5,
-                                color: Colors.white.withOpacity(0.2),
-                              ),
-                              borderRadius: const BorderRadius.all(
-                                Radius.circular(
-                                  16.0,
-                                ),
-                              ),
-                            ),
-                            child: ClipRRect(
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(
-                                  16.0,
-                                ),
-                                bottomRight: Radius.circular(
-                                  16.0,
-                                ),
-                              ),
-                              child: BackdropFilter(
-                                filter: ImageFilter.blur(
-                                  sigmaX: 5.0,
-                                  sigmaY: 5.0,
-                                ),
-                                child: Container(
-                                  padding: const EdgeInsets.all(16),
-                                  alignment: Alignment.centerLeft,
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0),
-                                    border: Border.all(
-                                      width: 1.5,
-                                      color: Colors.white.withOpacity(0.2),
-                                    ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.all(10),
+                                alignment: Alignment.bottomLeft,
+                                height: 160.0,
+                                width: 300,
+                                decoration: BoxDecoration(
+                                  image: const DecorationImage(
+                                      image: NetworkImage(
+                                          'https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60'),
+                                      fit: BoxFit.cover),
+                                  color: white,
+                                  border: Border.all(
+                                    width: 1.5,
+                                    color: Colors.white.withOpacity(0.2),
                                   ),
-                                  child: Text(
-                                    'This Week',
-                                    style: GoogleFonts.montserrat(
-                                      color: white,
-                                      fontSize: 12,
-                                      letterSpacing: 1,
-                                      fontWeight: FontWeight.w500,
+                                  borderRadius: const BorderRadius.all(
+                                    Radius.circular(
+                                      16.0,
                                     ),
                                   ),
                                 ),
+                                child: ClipRRect(
+                                  borderRadius: const BorderRadius.only(
+                                    bottomLeft: Radius.circular(
+                                      16.0,
+                                    ),
+                                    bottomRight: Radius.circular(
+                                      16.0,
+                                    ),
+                                  ),
+                                  child: BackdropFilter(
+                                    filter: ImageFilter.blur(
+                                      sigmaX: 5.0,
+                                      sigmaY: 5.0,
+                                    ),
+                                    child: Container(
+                                      padding: const EdgeInsets.all(16),
+                                      alignment: Alignment.centerLeft,
+                                      height: 50,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white.withOpacity(0),
+                                        border: Border.all(
+                                          width: 1.5,
+                                          color: Colors.white.withOpacity(0.2),
+                                        ),
+                                      ),
+                                      child: Text(
+                                        'This Week',
+                                        style: GoogleFonts.montserrat(
+                                          color: white,
+                                          fontSize: 12,
+                                          letterSpacing: 1,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                           const SizedBox(
                             height: 16.0,
@@ -597,7 +607,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card6
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2.5,
+                  width: 300,
                   decoration: const BoxDecoration(
                     color: white,
                     borderRadius: BorderRadius.all(
@@ -613,7 +623,7 @@ class FajarDashboardView extends StatefulWidget {
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: NetworkImage(
-                              "https://images.unsplash.com/photo-1628082878598-ed6b930efb74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHZpZXd8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+                              "https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHZpZXd8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
                             ),
                             fit: BoxFit.cover,
                           ),
@@ -793,7 +803,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card7
               Container(
                 height: 200,
-                width: MediaQuery.of(context).size.width / 2.5,
+                width: 300,
                 padding: const EdgeInsets.all(18),
                 decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -841,7 +851,7 @@ class FajarDashboardView extends StatefulWidget {
 
               //Card8
               SizedBox(
-                width: MediaQuery.of(context).size.width / 2.5,
+                width: 300,
                 child: Card(
                   color: Colors.black,
                   shape: ContinuousRectangleBorder(
@@ -856,6 +866,7 @@ class FajarDashboardView extends StatefulWidget {
                         ),
                         const Icon(
                           Icons.watch_later,
+                          color: white,
                           size: 26.0,
                         ),
                         const SizedBox(
@@ -1156,7 +1167,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card12
               Container(
                 height: 300,
-                width: MediaQuery.of(context).size.width / 2.5,
+                width: 300,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
