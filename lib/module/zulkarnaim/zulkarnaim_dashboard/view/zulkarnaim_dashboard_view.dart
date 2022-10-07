@@ -17,8 +17,10 @@ class ZulkarnaimDashboardView extends StatefulWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
+                width: 430,
                 child: Row(
                   children: [
                     Stack(
@@ -55,6 +57,13 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                                   Colors.grey[200]!,
                                 ],
                               ),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x19000000),
+                                  blurRadius: 24,
+                                  offset: Offset(0, 20),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -189,6 +198,115 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                           ),
                         ),
                       ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              SizedBox(
+                width: 200.0,
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 250.0,
+                      width: 200.0,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            24.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        height: 180.0,
+                        width: 200.0,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              24.0,
+                            ),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x19000000),
+                              blurRadius: 15,
+                              offset: Offset(0, 11),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Container(
+                        height: 175.0,
+                        width: 175.0,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://i.ibb.co/ChG42vq/vegetable-banner.png",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              16.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      right: 5,
+                      left: 5,
+                      child: Column(
+                        children: [
+                          const Text(
+                            "Vegetable & Beans",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.green,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
+                          Container(
+                            child: Row(
+                              children: const [
+                                SizedBox(
+                                  width: 20.0,
+                                ),
+                                Text(
+                                  "49 Calories",
+                                  style: TextStyle(
+                                    fontSize: 15.0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                Spacer(),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 15.0,
+                                  color: Colors.green,
+                                ),
+                                SizedBox(
+                                  width: 20.0,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
