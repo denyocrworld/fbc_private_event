@@ -74,7 +74,7 @@ class DenyDashboardView extends StatefulWidget {
                               ],
                             ),
                             const SizedBox(
-                              height: 10.0,
+                              height: 6.0,
                             ),
                             const Text(
                               "7 Skills of Highly Effective Programmers",
