@@ -44,7 +44,7 @@ class DenyDashboardView extends StatefulWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                           image: NetworkImage(
-                            "https://i.ibb.co/3pPYd14/freeban.jpg",
+                            "https://i.ibb.co/dGcQ5bw/photo-1549692520-acc6669e2f0c-ixlib-rb-1-2.jpg",
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -53,6 +53,7 @@ class DenyDashboardView extends StatefulWidget {
                     Container(
                       padding: const EdgeInsets.all(12.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: const [
@@ -77,7 +78,7 @@ class DenyDashboardView extends StatefulWidget {
                           const Text(
                             "7 Skills of Highly Effective Programmers",
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 12.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -97,15 +98,23 @@ class DenyDashboardView extends StatefulWidget {
                             leading: CircleAvatar(
                               backgroundColor: Colors.grey[200],
                               backgroundImage: const NetworkImage(
-                                "https://i.ibb.co/QrTHd59/woman.jpg",
+                                "https://i.ibb.co/sqRTGfL/photo-1514543250559-83867827ecce-ixlib-rb-1-2.jpg",
                               ),
                             ),
-                            title: const Text("Jessica Doe"),
+                            title: const Text(
+                              "Ryan Blink",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.orange,
+                              ),
+                            ),
                             trailing: const Text(
                               "Read more",
                               style: TextStyle(
                                 fontSize: 10.0,
                                 fontWeight: FontWeight.bold,
+                                color: Colors.orange,
                               ),
                             ),
                           ),
