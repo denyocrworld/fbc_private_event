@@ -78,6 +78,8 @@ class DenyDashboardView extends StatefulWidget {
                             ),
                             const Text(
                               "7 Skills of Highly Effective Programmers",
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.bold,
@@ -174,30 +176,40 @@ class DenyDashboardView extends StatefulWidget {
                               fontSize: 12.0,
                             ),
                           ),
-                          ListTile(
-                            contentPadding: const EdgeInsets.all(0.0),
-                            leading: CircleAvatar(
-                              backgroundColor: Colors.grey[200],
-                              backgroundImage: const NetworkImage(
-                                "https://i.ibb.co/sqRTGfL/photo-1514543250559-83867827ecce-ixlib-rb-1-2.jpg",
+                          const SizedBox(
+                            height: 6.0,
+                          ),
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 12.0,
+                                backgroundColor: Colors.grey[200],
+                                backgroundImage: const NetworkImage(
+                                  "https://i.ibb.co/sqRTGfL/photo-1514543250559-83867827ecce-ixlib-rb-1-2.jpg",
+                                ),
                               ),
-                            ),
-                            title: const Text(
-                              "Ryan Blink",
-                              style: TextStyle(
-                                fontSize: 12.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.orange,
+                              const SizedBox(
+                                width: 8.0,
                               ),
-                            ),
-                            trailing: const Text(
-                              "Read more",
-                              style: TextStyle(
-                                fontSize: 10.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.orange,
+                              const Expanded(
+                                child: Text(
+                                  "Ryan Blink",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.orange,
+                                  ),
+                                ),
                               ),
-                            ),
+                              const Text(
+                                "Read more",
+                                style: TextStyle(
+                                  fontSize: 10.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.orange,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
