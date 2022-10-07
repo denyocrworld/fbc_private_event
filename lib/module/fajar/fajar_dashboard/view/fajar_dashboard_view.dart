@@ -9,6 +9,9 @@ import '../controller/fajar_dashboard_controller.dart';
 class FajarDashboardView extends StatefulWidget {
   const FajarDashboardView({Key? key}) : super(key: key);
 
+  @override
+  State<FajarDashboardView> createState() => FajarDashboardController();
+
   Widget build(context, FajarDashboardController controller) {
     controller.view = this;
 
@@ -35,7 +38,6 @@ class FajarDashboardView extends StatefulWidget {
       fontWeight: FontWeight.w500,
     );
 
-    const currentStep = 0;
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: SingleChildScrollView(
@@ -50,7 +52,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card1
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2,
+                  width: MediaQuery.of(context).size.width / 2.5,
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
                   decoration: const BoxDecoration(
                     boxShadow: [
@@ -181,7 +183,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card2
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2,
+                  width: MediaQuery.of(context).size.width / 2.5,
                   padding: const EdgeInsets.all(16),
                   decoration: const BoxDecoration(
                     color: purple,
@@ -264,7 +266,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card3
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2,
+                  width: MediaQuery.of(context).size.width / 2.5,
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
                     color: white,
@@ -330,7 +332,7 @@ class FajarDashboardView extends StatefulWidget {
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
                     child: Container(
-                      width: MediaQuery.of(context).size.width / 2,
+                      width: MediaQuery.of(context).size.width / 2.5,
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -406,7 +408,7 @@ class FajarDashboardView extends StatefulWidget {
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
                     child: Container(
-                      width: MediaQuery.of(context).size.width / 2,
+                      width: MediaQuery.of(context).size.width / 2.5,
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -595,7 +597,7 @@ class FajarDashboardView extends StatefulWidget {
               //Card6
               FittedBox(
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2,
+                  width: MediaQuery.of(context).size.width / 2.5,
                   decoration: const BoxDecoration(
                     color: white,
                     borderRadius: BorderRadius.all(
@@ -607,7 +609,7 @@ class FajarDashboardView extends StatefulWidget {
                   child: Column(
                     children: [
                       Container(
-                        height: 200.0,
+                        height: 250.0,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: NetworkImage(
@@ -623,7 +625,7 @@ class FajarDashboardView extends StatefulWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 16.0,
+                        height: 10.0,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
@@ -659,7 +661,7 @@ class FajarDashboardView extends StatefulWidget {
                               ],
                             ),
                             const SizedBox(
-                              height: 12.0,
+                              height: 8.0,
                             ),
                             Text(
                               "Twitter Holiday",
@@ -784,7 +786,540 @@ class FajarDashboardView extends StatefulWidget {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 20.0,
+              ),
 
+              //Card7
+              Container(
+                height: 200,
+                width: MediaQuery.of(context).size.width / 2.5,
+                padding: const EdgeInsets.all(18),
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1606318621597-c057f7d4926e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODJ8fG1vdW50YWlufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      32.0,
+                    ),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Best view from mountain\nHere we can see A\nBeautiful view",
+                      style: GoogleFonts.montserrat(
+                        color: white,
+                        fontSize: 14,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(
+                      "7 October 2022",
+                      style: GoogleFonts.montserrat(
+                        color: white,
+                        fontSize: 12,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+
+              //Card8
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 2.5,
+                child: Card(
+                  color: Colors.black,
+                  shape: ContinuousRectangleBorder(
+                    borderRadius: BorderRadius.circular(64.0),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 10.0,
+                        ),
+                        const Icon(
+                          Icons.watch_later,
+                          size: 26.0,
+                        ),
+                        const SizedBox(
+                          width: 14.0,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Dont Wasting Your Time",
+                              style: GoogleFonts.montserrat(
+                                color: white,
+                                fontSize: 12,
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 3.0,
+                            ),
+                            Text(
+                              "34:22",
+                              style: GoogleFonts.montserrat(
+                                color: white,
+                                fontSize: 12,
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+
+              //Card 9, 10, 11
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    //Card9
+                    Column(
+                      children: [
+                        Stack(
+                          children: [
+                            Container(
+                              height: 240.0,
+                              width: 170,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    16.0,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 240.0,
+                              width: 170,
+                              decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomCenter,
+                                    end: Alignment.topCenter,
+                                    colors: [
+                                      Colors.black,
+                                      Colors.transparent,
+                                    ],
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(
+                                    16.0,
+                                  ))),
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 217, left: 120),
+                              child: CircleAvatar(
+                                radius: 18,
+                                backgroundColor: Colors.black,
+                                child: Icon(
+                                  Icons.add,
+                                  color: white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                        SizedBox(
+                          width: 170,
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 120,
+                                  child: Text(
+                                    "Fade Bottom",
+                                    style: GoogleFonts.montserrat(
+                                      color: white,
+                                      fontSize: 12,
+                                      letterSpacing: 1,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              Text(
+                                "\$100",
+                                style: GoogleFonts.montserrat(
+                                  color: white,
+                                  fontSize: 12,
+                                  letterSpacing: 1,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 20.0,
+                    ),
+
+                    //Card10
+                    Column(
+                      children: [
+                        Stack(
+                          children: [
+                            Container(
+                              height: 240.0,
+                              width: 170,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://images.unsplash.com/photo-1628784230353-5bee16e2f005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGltYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    16.0,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 217, left: 120),
+                              child: CircleAvatar(
+                                radius: 18,
+                                backgroundColor: Colors.black,
+                                child: Icon(
+                                  Icons.add,
+                                  color: white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                        SizedBox(
+                          width: 170,
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 120,
+                                  child: Text(
+                                    "Fizfat Healing2",
+                                    style: GoogleFonts.montserrat(
+                                      color: white,
+                                      fontSize: 12,
+                                      letterSpacing: 1,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              Text(
+                                "\$99",
+                                style: GoogleFonts.montserrat(
+                                  color: white,
+                                  fontSize: 12,
+                                  letterSpacing: 1,
+                                  fontWeight: FontWeight.w400,
+                                  decoration: TextDecoration.lineThrough,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 20.0,
+                    ),
+
+                    //Card11
+                    Column(
+                      children: [
+                        Stack(
+                          children: [
+                            Container(
+                              height: 240.0,
+                              width: 170,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://images.unsplash.com/photo-1557296869-e9a76501a0d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGltYWdlJTIwYXdlc29tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    16.0,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 217, left: 120),
+                              child: CircleAvatar(
+                                radius: 18,
+                                backgroundColor: Colors.black,
+                                child: Icon(
+                                  Icons.add,
+                                  color: white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                        SizedBox(
+                          width: 170,
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 120,
+                                  child: Text(
+                                    "Fizfat Healing3",
+                                    style: GoogleFonts.montserrat(
+                                      color: white,
+                                      fontSize: 12,
+                                      letterSpacing: 1,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              Text(
+                                "\$111",
+                                style: GoogleFonts.montserrat(
+                                  color: white,
+                                  fontSize: 12,
+                                  letterSpacing: 1,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+
+              //Card12
+              Container(
+                height: 300,
+                width: MediaQuery.of(context).size.width / 2.5,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(
+                        "https://images.unsplash.com/photo-1576688453917-33e511b2e82d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8amFrYXJ0YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+                      ),
+                      fit: BoxFit.cover,
+                      filterQuality: FilterQuality.high),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Spacer(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const Text(
+                            '',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          const Spacer(),
+                          ClipRRect(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(12)),
+                            child: BackdropFilter(
+                              filter:
+                                  ImageFilter.blur(sigmaX: 4.0, sigmaY: 4.0),
+                              child: Container(
+                                margin: const EdgeInsets.all(5),
+                                height: 50,
+                                width: 50,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                      "https://images.unsplash.com/photo-1631469171215-247271da1c20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGpha2FydGF8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      16.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Jakarta\nIndonesia',
+                            style: GoogleFonts.montserrat(
+                                letterSpacing: 1,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w600,
+                                color: white),
+                          ),
+                          const Spacer(),
+                          ClipRRect(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(12)),
+                            child: BackdropFilter(
+                              filter:
+                                  ImageFilter.blur(sigmaX: 4.0, sigmaY: 4.0),
+                              child: Container(
+                                margin: const EdgeInsets.all(5),
+                                height: 50,
+                                width: 50,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                      "https://images.unsplash.com/photo-1632669744768-79d6b5087691?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGpha2FydGF8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      16.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: '\$50/',
+                                  style: GoogleFonts.montserrat(
+                                      letterSpacing: 1,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: white),
+                                ),
+                                TextSpan(
+                                  text: 'Person',
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 14,
+                                      letterSpacing: 1,
+                                      fontWeight: FontWeight.w500,
+                                      color: white),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          ClipRRect(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(12)),
+                            child: BackdropFilter(
+                              filter:
+                                  ImageFilter.blur(sigmaX: 4.0, sigmaY: 4.0),
+                              child: Container(
+                                margin: const EdgeInsets.all(5),
+                                height: 50,
+                                width: 50,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                      "https://images.unsplash.com/photo-1618050032268-6aa510a06191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGpha2FydGF8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      16.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 30.0,
               ),
@@ -794,7 +1329,4 @@ class FajarDashboardView extends StatefulWidget {
       ),
     );
   }
-
-  @override
-  State<FajarDashboardView> createState() => FajarDashboardController();
 }
