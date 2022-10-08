@@ -205,6 +205,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
               const SizedBox(
                 height: 20.0,
               ),
+              // card pertama
               SizedBox(
                 width: 200.0,
                 child: Stack(
@@ -229,7 +230,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.all(
                             Radius.circular(
-                              24.0,
+                              18.0,
                             ),
                           ),
                           boxShadow: [
@@ -304,6 +305,154 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                                 ),
                               ],
                             ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //card kedua
+              SizedBox(
+                width: 200.0,
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 250.0,
+                      width: 200.0,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            24.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        height: 180.0,
+                        width: 200.0,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              24.0,
+                            ),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x19000000),
+                              blurRadius: 15,
+                              offset: Offset(0, 11),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Container(
+                        height: 175.0,
+                        width: 175.0,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://i.ibb.co/ChG42vq/vegetable-banner.png",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              16.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 8,
+                      right: 5,
+                      left: 5,
+                      child: Column(
+                        children: [
+                          const Text(
+                            "Mi Ayam Spesial",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.location_on,
+                                size: 12.0,
+                                color: Colors.red,
+                              ),
+                              Text(
+                                "Mi Ayam Kang Ujang",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: const [
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 12.0,
+                                color: Colors.yellow,
+                              ),
+                              Text(
+                                "4.5 (165)",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Rp. 15.000",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 5.0,
                           ),
                         ],
                       ),
