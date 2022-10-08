@@ -169,7 +169,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                      "https://i.ibb.co/ChG42vq/vegetable-banner.png",
+                                      "https://i.ibb.co/tQT48RF/mie-ayam-ceker.png",
                                     ),
                                     fit: BoxFit.cover,
                                   ),
@@ -677,7 +677,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage(
-                                "https://i.ibb.co/t8YF1St/bakso-polos.png",
+                                "https://i.ibb.co/YPtvzSR/bakso-mercon.png",
                               ),
                               fit: BoxFit.cover,
                             ),
@@ -706,7 +706,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                "Bakso Kosong",
+                                "Bakso Mercon",
                                 style: TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
@@ -716,7 +716,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                                 height: 5.0,
                               ),
                               const Text(
-                                "Rp. 10.000",
+                                "Rp. 20.000",
                                 style: TextStyle(
                                   fontSize: 15.0,
                                   color: Colors.grey,
@@ -812,7 +812,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                                     ],
                                   )),
                               child: const Icon(
-                                Icons.remove,
+                                Icons.delete_outline,
                                 size: 24.0,
                                 color: Colors.white,
                               ),
@@ -829,7 +829,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                     height: 250.0,
                     width: 250.0,
                     decoration: const BoxDecoration(
-                      color: Colors.red,
+                      color: Colors.transparent,
                       borderRadius: BorderRadius.all(
                         Radius.circular(
                           32.0,
