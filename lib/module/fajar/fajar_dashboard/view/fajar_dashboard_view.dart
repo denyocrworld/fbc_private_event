@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable
+// ignore_for_file: unused_local_variable, unused_element
 
 import 'dart:ui';
 
@@ -14,6 +14,15 @@ class FajarDashboardView extends StatefulWidget {
 
   Widget build(context, FajarDashboardController controller) {
     controller.view = this;
+    PageController pageController = PageController();
+
+    int activePage = 0;
+
+    final images = [
+      "https://images.unsplash.com/photo-1468476396571-4d6f2a427ee7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG5pZ2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "https://media.istockphoto.com/photos/the-city-of-london-skyline-at-night-united-kingdom-picture-id1312550959?b=1&k=20&m=1312550959&s=170667a&w=0&h=RR30MGnFgyX2LnmvrffOsiaXkhB-oEuMkvtqu4JyVI0=",
+      "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmlnaHR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+    ];
 
     //Colors
     const teal = Color.fromRGBO(104, 209, 158, 1);
@@ -38,10 +47,44 @@ class FajarDashboardView extends StatefulWidget {
       fontWeight: FontWeight.w500,
     );
 
+    //Methode Carousel
+    AnimatedContainer slider(images, pagePosition, active) {
+      double margin = active ? 10 : 20;
+
+      return AnimatedContainer(
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOutCubic,
+        margin: EdgeInsets.all(margin),
+        decoration: BoxDecoration(
+            image: DecorationImage(image: NetworkImage(images[pagePosition]))),
+      );
+    }
+
+    imageAnimation(PageController animation, images, pagePosition) {
+      return AnimatedBuilder(
+        animation: animation,
+        builder: (context, widget) {
+          return SizedBox(
+            width: 200,
+            height: 200,
+            child: widget,
+          );
+        },
+        child: Container(
+          margin: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Image.network(images[pagePosition]),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: const Text("FajarDashboard"),
+        title: const Text("FajarDashboard, Package Use? GFont"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -49,6 +92,61 @@ class FajarDashboardView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 20.0,
+              ),
+
+              //Card0
+              FittedBox(
+                child: Container(
+                  width: 300,
+                  padding: const EdgeInsets.all(16),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        16.0,
+                      ),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width,
+                        child: StatefulBuilder(builder: (context, snapshot) {
+                          return PageView.builder(
+                              itemCount: images.length,
+                              pageSnapping: true,
+                              controller: pageController,
+                              onPageChanged: (page) {
+                                snapshot(() {
+                                  activePage = page;
+                                });
+                              },
+                              itemBuilder: (context, pagePosition) {
+                                bool active = pagePosition == activePage;
+                                return slider(images, pagePosition, active);
+                              });
+                        }),
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        "Horizontal Scrollable View List Swipe With Trackpad",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.montserrat(
+                          color: grey,
+                          fontSize: 12,
+                          letterSpacing: 1,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 20.0,
               ),
@@ -907,255 +1005,147 @@ class FajarDashboardView extends StatefulWidget {
                 height: 20.0,
               ),
 
-              //Card 9, 10, 11
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+              //Card 9
+              Column(
+                children: [
+                  Stack(
+                    children: [
+                      Container(
+                        height: 240.0,
+                        width: 170,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              16.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 240.0,
+                        width: 170,
+                        decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                              colors: [
+                                Colors.black,
+                                Colors.transparent,
+                              ],
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(
+                              16.0,
+                            ))),
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 217, left: 120),
+                        child: CircleAvatar(
+                          radius: 18,
+                          backgroundColor: Colors.black,
+                          child: Icon(
+                            Icons.add,
+                            color: white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
+                  SizedBox(
+                    width: 170,
+                    child: Row(
+                      children: [
+                        SizedBox(
+                            width: 120,
+                            child: Text(
+                              "Fade Bottom",
+                              style: GoogleFonts.montserrat(
+                                color: white,
+                                fontSize: 12,
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            )),
+                        const SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          "\$100",
+                          style: GoogleFonts.montserrat(
+                            color: white,
+                            fontSize: 12,
+                            letterSpacing: 1,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+
+              //Card10
+              Container(
+                height: 240.0,
+                width: 170,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0x19000000),
+                      blurRadius: 24,
+                      offset: Offset(0, 11),
+                    ),
+                  ],
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1495430288918-03be19c7c485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5pZ2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      32.0,
+                    ),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    //Card9
-                    Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Container(
-                              height: 240.0,
-                              width: 170,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
-                                  ),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                    16.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: 240.0,
-                              width: 170,
-                              decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.bottomCenter,
-                                    end: Alignment.topCenter,
-                                    colors: [
-                                      Colors.black,
-                                      Colors.transparent,
-                                    ],
-                                  ),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(
-                                    16.0,
-                                  ))),
-                            ),
-                            const SizedBox(
-                              height: 10.0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 217, left: 120),
-                              child: CircleAvatar(
-                                radius: 18,
-                                backgroundColor: Colors.black,
-                                child: Icon(
-                                  Icons.add,
-                                  color: white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        SizedBox(
-                          width: 170,
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                  width: 120,
-                                  child: Text(
-                                    "Fade Bottom",
-                                    style: GoogleFonts.montserrat(
-                                      color: white,
-                                      fontSize: 12,
-                                      letterSpacing: 1,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )),
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                "\$100",
-                                style: GoogleFonts.montserrat(
-                                  color: white,
-                                  fontSize: 12,
-                                  letterSpacing: 1,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    Text(
+                      "Night Road",
+                      style: GoogleFonts.montserrat(
+                        color: white,
+                        fontSize: 18,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                    const SizedBox(
-                      width: 20.0,
-                    ),
-
-                    //Card10
-                    Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Container(
-                              height: 240.0,
-                              width: 170,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    "https://images.unsplash.com/photo-1628784230353-5bee16e2f005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGltYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
-                                  ),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                    16.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 10.0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 217, left: 120),
-                              child: CircleAvatar(
-                                radius: 18,
-                                backgroundColor: Colors.black,
-                                child: Icon(
-                                  Icons.add,
-                                  color: white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        SizedBox(
-                          width: 170,
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                  width: 120,
-                                  child: Text(
-                                    "Fizfat Healing2",
-                                    style: GoogleFonts.montserrat(
-                                      color: white,
-                                      fontSize: 12,
-                                      letterSpacing: 1,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )),
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                "\$99",
-                                style: GoogleFonts.montserrat(
-                                  color: white,
-                                  fontSize: 12,
-                                  letterSpacing: 1,
-                                  fontWeight: FontWeight.w400,
-                                  decoration: TextDecoration.lineThrough,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 20.0,
-                    ),
-
-                    //Card11
-                    Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Container(
-                              height: 240.0,
-                              width: 170,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    "https://images.unsplash.com/photo-1557296869-e9a76501a0d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGltYWdlJTIwYXdlc29tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
-                                  ),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                    16.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 10.0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 217, left: 120),
-                              child: CircleAvatar(
-                                radius: 18,
-                                backgroundColor: Colors.black,
-                                child: Icon(
-                                  Icons.add,
-                                  color: white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        SizedBox(
-                          width: 170,
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                  width: 120,
-                                  child: Text(
-                                    "Fizfat Healing3",
-                                    style: GoogleFonts.montserrat(
-                                      color: white,
-                                      fontSize: 12,
-                                      letterSpacing: 1,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )),
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                "\$111",
-                                style: GoogleFonts.montserrat(
-                                  color: white,
-                                  fontSize: 12,
-                                  letterSpacing: 1,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    Text(
+                      "1,2M+players",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: white,
+                        fontSize: 12,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ],
                 ),
@@ -1164,7 +1154,7 @@ class FajarDashboardView extends StatefulWidget {
                 height: 20.0,
               ),
 
-              //Card12
+              //Card 11
               Container(
                 height: 300,
                 width: 300,
