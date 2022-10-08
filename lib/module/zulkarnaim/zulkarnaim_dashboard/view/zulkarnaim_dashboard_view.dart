@@ -265,7 +265,7 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: NetworkImage(
-                                  "https://i.ibb.co/ChG42vq/vegetable-banner.png",
+                                  "https://i.ibb.co/2h6TVyf/mie-ayam-hijau.png",
                                 ),
                                 fit: BoxFit.cover,
                               ),
@@ -491,172 +491,541 @@ class ZulkarnaimDashboardView extends StatefulWidget {
                   ),
                 ),
               ),
-              Container(
-                height: 130.0,
-                width: 295.0,
-                decoration: BoxDecoration(
-                  color: Colors.blueGrey[100]!,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(
-                      32.0,
-                    ),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    const SizedBox(
-                      width: 5.0,
-                    ),
-                    Container(
-                      height: 100.0,
-                      width: 100.0,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(
-                            "https://i.ibb.co/t8YF1St/bakso-polos.png",
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            16.0,
-                          ),
+              Row(
+                children: [
+                  Container(
+                    height: 130.0,
+                    width: 315.0,
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey[100]!,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          32.0,
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      height: 170.0,
-                      width: 130,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            16.0,
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 5.0,
+                        ),
+                        Container(
+                          height: 100.0,
+                          width: 100.0,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                "https://i.ibb.co/t8YF1St/bakso-polos.png",
+                              ),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                16.0,
+                              ),
+                            ),
                           ),
                         ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            "Bakso Kosong",
-                            style: TextStyle(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.bold,
+                        const SizedBox(
+                          width: 10.0,
+                        ),
+                        Container(
+                          height: 170.0,
+                          width: 130,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                16.0,
+                              ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 5.0,
-                          ),
-                          const Text(
-                            "Rp. 10.000",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              color: Colors.grey,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 25.0,
-                          ),
-                          Row(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                height: 30.0,
-                                width: 30,
-                                decoration: const BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.0,
-                                    ),
-                                  ),
-                                ),
-                                child: const Icon(
-                                  Icons.remove,
-                                  size: 24.0,
-                                  color: Colors.orange,
+                              const Text(
+                                "Bakso Kosong",
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              Container(
-                                height: 30.0,
-                                width: 30,
-                                decoration: const BoxDecoration(
-                                  color: Colors.transparent,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.0,
-                                    ),
-                                  ),
+                              const SizedBox(
+                                height: 10.0,
+                              ),
+                              const Text(
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 10.0,
+                                  color: Colors.grey,
                                 ),
-                                child: const Center(
-                                  child: Text(
-                                    "1",
+                              ),
+                              const SizedBox(
+                                height: 10.0,
+                              ),
+                              Row(
+                                children: const [
+                                  Icon(
+                                    Icons.star,
+                                    size: 12.0,
+                                    color: Colors.yellow,
+                                  ),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Text(
+                                    "4.5",
                                     style: TextStyle(
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12.0,
                                     ),
                                   ),
-                                ),
-                              ),
-                              Container(
-                                height: 30.0,
-                                width: 30,
-                                decoration: const BoxDecoration(
-                                  color: Colors.orange,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.0,
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Icon(
+                                    Icons.timer_outlined,
+                                    size: 12.0,
+                                    color: Colors.black,
+                                  ),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Text(
+                                    "15 Menit",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
                                     ),
                                   ),
-                                ),
-                                child: const Icon(
-                                  Icons.add,
-                                  size: 24.0,
-                                  color: Colors.white,
-                                ),
+                                ],
                               ),
                             ],
                           ),
-                        ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20.0, vertical: 20),
+                              child: const Icon(
+                                Icons.favorite_outline,
+                                size: 24.0,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Container(
+                              height: 40.0,
+                              width: 70,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(
+                                      32.0,
+                                    ),
+                                    topLeft: Radius.circular(
+                                      24.0,
+                                    ),
+                                  ),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight,
+                                    colors: [
+                                      Colors.orange,
+                                      Colors.orangeAccent,
+                                    ],
+                                  )),
+                              child: const Center(
+                                child: Text(
+                                  "Rp. 15.000",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20.0,
+                  ),
+                  Container(
+                    height: 130.0,
+                    width: 295.0,
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey[100]!,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          32.0,
+                        ),
                       ),
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                    child: Row(
                       children: [
+                        const SizedBox(
+                          width: 5.0,
+                        ),
                         Container(
-                          height: 40.0,
-                          width: 50,
+                          height: 100.0,
+                          width: 100.0,
                           decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                "https://i.ibb.co/t8YF1St/bakso-polos.png",
+                              ),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                16.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10.0,
+                        ),
+                        Container(
+                          height: 170.0,
+                          width: 130,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                16.0,
+                              ),
+                            ),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                "Bakso Kosong",
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              const Text(
+                                "Rp. 10.000",
+                                style: TextStyle(
+                                  fontSize: 15.0,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 25.0,
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 30.0,
+                                    width: 30,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(
+                                          8.0,
+                                        ),
+                                      ),
+                                    ),
+                                    child: const Icon(
+                                      Icons.remove,
+                                      size: 24.0,
+                                      color: Colors.orange,
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 30.0,
+                                    width: 30,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(
+                                          8.0,
+                                        ),
+                                      ),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        "1",
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 30.0,
+                                    width: 30,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.orange,
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(
+                                          8.0,
+                                        ),
+                                      ),
+                                    ),
+                                    child: const Icon(
+                                      Icons.add,
+                                      size: 24.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              height: 40.0,
+                              width: 50,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(
+                                      32.0,
+                                    ),
+                                    topLeft: Radius.circular(
+                                      24.0,
+                                    ),
+                                  ),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight,
+                                    colors: [
+                                      Colors.orange,
+                                      Colors.orangeAccent,
+                                    ],
+                                  )),
+                              child: const Icon(
+                                Icons.remove,
+                                size: 24.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20.0,
+                  ),
+                  Container(
+                    height: 250.0,
+                    width: 250.0,
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(
+                          32.0,
+                        ),
+                      ),
+                    ),
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          top: 0,
+                          child: Container(
+                            height: 150,
+                            width: 250,
+                            decoration: BoxDecoration(
+                              color: Colors.blueGrey[100],
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(32.0),
+                                topRight: Radius.circular(32.0),
+                              ),
+                            ),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const SizedBox(
+                                    height: 30.0,
+                                  ),
+                                  Row(
+                                    children: const [
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                      Text(
+                                        "Subtotal",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Rp. 10.000",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 20.0,
+                                  ),
+                                  Row(
+                                    children: const [
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                      Text(
+                                        "Biaya Tambahan",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Rp. 10.000",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 20.0,
+                                  ),
+                                  Row(
+                                    children: const [
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                      Text(
+                                        "Ongkos Kirim",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Rp. 10.000",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          child: Container(
+                            height: 100.0,
+                            width: 250.0,
+                            decoration: BoxDecoration(
+                              color: Colors.blueGrey[200],
+                              borderRadius: const BorderRadius.only(
                                 bottomRight: Radius.circular(
                                   32.0,
                                 ),
-                                topLeft: Radius.circular(
-                                  24.0,
+                                bottomLeft: Radius.circular(
+                                  32.0,
                                 ),
                               ),
-                              gradient: LinearGradient(
-                                begin: Alignment.centerLeft,
-                                end: Alignment.centerRight,
-                                colors: [
-                                  Colors.orange,
-                                  Colors.orangeAccent,
+                            ),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const [
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                      Text(
+                                        "Total",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Rp. 30.000",
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10.0,
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 15.0,
+                                  ),
+                                  SizedBox(
+                                    width: 180,
+                                    height: 40,
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.blueGrey,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                              24), // <-- Radius
+                                        ),
+                                      ),
+                                      onPressed: () {},
+                                      child: const Text(
+                                        "Process to Chackout",
+                                        style: TextStyle(
+                                          fontSize: 12.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ],
-                              )),
-                          child: const Icon(
-                            Icons.remove,
-                            size: 24.0,
-                            color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),
